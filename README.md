@@ -28,3 +28,4 @@ curl https://azure-mcp-gateway.vercel.app/api/mcp
 ```
 
 # Trigger redeploy
+# Fix client ID
