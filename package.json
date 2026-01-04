@@ -1,9 +1,6 @@
 {
   "name": "azure-mcp-gateway",
   "version": "1.0.0",
-  "scripts": {
-    "build": "echo 'Build complete'"
-  },
   "dependencies": {
     "@azure/arm-resources": "^5.2.0",
     "@azure/arm-compute": "^21.1.0",
