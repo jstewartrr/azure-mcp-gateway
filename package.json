@@ -1,0 +1,17 @@
+{
+  "name": "azure-mcp-gateway",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node api/mcp.js",
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "@azure/arm-resources": "^5.2.0",
+    "@azure/arm-compute": "^21.1.0",
+    "@azure/arm-containerinstance": "^9.1.0",
+    "@azure/arm-storage": "^18.2.0",
+    "@azure/identity": "^4.0.0"
+  }
+}
+
