@@ -1,9 +1,9 @@
-// Azure MCP Gateway - Vercel API Route
-import { ResourceManagementClient } from '@azure/arm-resources';
-import { ComputeManagementClient } from '@azure/arm-compute';
-import { ContainerInstanceManagementClient } from '@azure/arm-containerinstance';
-import { StorageManagementClient } from '@azure/arm-storage';
-import { ClientSecretCredential } from '@azure/identity';
+// Azure MCP Gateway - Vercel Serverless Function
+const { ResourceManagementClient } = require('@azure/arm-resources');
+const { ComputeManagementClient } = require('@azure/arm-compute');
+const { ContainerInstanceManagementClient } = require('@azure/arm-containerinstance');
+const { StorageManagementClient } = require('@azure/arm-storage');
+const { ClientSecretCredential } = require('@azure/identity');
 
 const ALLOWED_ORIGINS = [
   'https://claude.ai',
@@ -165,7 +165,7 @@ async function executeAzureTool(toolName, args) {
 }
 
 // Main handler
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   // CORS
   const origin = req.headers.origin || req.headers.referer;
   const allowedOrigin = ALLOWED_ORIGINS.find(allowed => origin?.includes(allowed));
@@ -211,5 +211,5 @@ export default async function handler(req, res) {
     console.error('Error:', error);
     return res.status(500).json({ error: error.message });
   }
-}
+};
 
