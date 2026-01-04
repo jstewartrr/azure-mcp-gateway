@@ -27,3 +27,4 @@ Deployed to Vercel at: https://azure-mcp-gateway.vercel.app
 curl https://azure-mcp-gateway.vercel.app/api/mcp
 ```
 
+# Trigger redeploy
